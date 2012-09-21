@@ -1,0 +1,5 @@
+h1. !{vertical-align:middle}https://github.com/ModeShape/modeshape.github.com/raw/develop/images/modeshape_icon_64px.png! ModeShape Website Source
+
+This repository contains the source of the ModeShape website (hosted using "github pages":http://pages.github.com), to which the "modeshape.org":modeshape.org hostname (will soon) resolves.
+
+The website is built using "Awestruct":awestruct.org. Make changes to the files in the @develop@ branch, which contains the unprocessed website source. Then, use Awestruct locally to transform those files into the static website pages in the @_site@ directory. Then update the public site by pushing the generated contents of the @_site@ directory to the @master@ branch.
