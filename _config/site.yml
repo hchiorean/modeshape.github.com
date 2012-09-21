@@ -1,0 +1,33 @@
+title: ModeShape
+version: 3.0.0.Beta4
+tagline: The fast and scalable hierarchical database
+description: Fast and scalable distributed database for hierarhical data. Open source. Fast. Scalable. Highly-available.
+ohloh_id: 474392
+issue_tracker: https://issues.jboss.org/browse/MODE
+github_organization_name: ModeShape
+github_organization_url: https://github.com/ModeShape
+source_repo: https://github.com/ModeShape/modeshape
+website_source_repo: https://github.com/ModeShape/modeshape.github.com
+terms_of_use: http://www.redhat.com/legal/legal_statement.html
+privacy_policy: http://www.redhat.com/legal/privacy_statement.html
+api_docs: http://docs.jboss.org/modeshape/api/latest
+downloads_url: http://downloads.jboss.org/modeshape/
+profiles:
+  debug:
+    show_debug: true
+  development:
+  staging:
+    base_url: http://staging.modeshape.org/
+    add_google_tracker: false
+    deploy:
+      host: modeshape.org
+      path: /var/www/domains/modeshape.org/staging/htdocs
+  production:
+    base_url: http://modeshape.org/
+    add_google_tracker: false
+    disqus: modeshape
+    deploy:
+      host: modeshape.org
+      path: /var/www/domains/modeshape.org/www/htdocs
+disqus: modeshape
+google_analytics: blah-blah
