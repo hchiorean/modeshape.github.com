@@ -27,16 +27,16 @@
           box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
 .jumbotron h1 {
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
 }
 .jumbotron p {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 300;
-  line-height: 30px;
-  margin-bottom: 30px;
+  line-height: 25px;
+  margin-bottom: 20px;
 }
 
 /* Link styles (used on .masthead-links as well) */
@@ -55,8 +55,8 @@
 /* Download button */
 .masthead .btn {
   padding: 14px 24px;
-  font-size: 22px;
-  font-weight: 200;
+  font-size: 20px;
+  font-weight: 175;
   color: #fff; /* redeclare to override the `.jumbotron a` */
   border: 0;
   -webkit-border-radius: 6px;
@@ -115,21 +115,21 @@
 /* Masthead (home)
 ------------------------- */
 .masthead {
-  padding: 60px 0 40px;
+  padding: 30px 0 0px;
   margin-bottom: 0;
   color: #fff;
 }
 .masthead h1 {
-  font-size: 100px;
+  font-size: 80px;
   line-height: 1;
   letter-spacing: -2px;
 }
 .masthead p {
-  font-size: 35px;
-  font-weight: 200;
+  font-size: 30px;
+  font-weight: 175;
   line-height: 1.25;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 /* Textual links in masthead */
@@ -148,8 +148,8 @@
 ------------------------- */
 .subhead {
   text-align: left;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 .subhead h1 {
   font-size: 60px;
@@ -239,6 +239,41 @@ p {
   padding-top: 40px;
 }
 
+/* Content
+------------------------- */
+
+.marketing {
+  text-align: center;
+  color: $marketing_text_color;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.marketing h1 {
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 1.15;
+}
+
+.marketing h2 {
+  font-size: 35px;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.marketing p {
+  padding: 0px 20px 5px 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.marketing .btn {
+  //padding: 14px 24px;
+  font-size: 24px;
+  font-weight: 175;
+}
+
 // Top banner and navigation section
 
 .navbar-fixed-top {
@@ -289,7 +324,7 @@ p {
   }
   .jumbotron {
     margin-top: -10px;
-    margin-right: -20px;
+    margin-right: 0px;
   }
   [class*="span"] {
     float: left;
@@ -304,7 +339,7 @@ footer {
   background-color: $footer_base_color;
   color: $footer_text_color;
   margin-left: -20px;
-  margin-right: -20px;
+  margin-right: 0px;
   margin-top: 50px;
   margin-bottom: 0px;
   padding-top: 50px;
@@ -408,6 +443,9 @@ footer {
     min-height: 1px;
     margin-left: 20px;
   }
+  footer {
+    margin-right: -20px;
+  }
 }
 
 
@@ -438,7 +476,6 @@ footer {
   .masthead h1 {
     font-size: 80px;
     line-height: 1;
-    margin-bottom: 20px;
   }
   .masthead p {
     font-size: 25px;

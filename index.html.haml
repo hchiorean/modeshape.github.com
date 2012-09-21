@@ -31,6 +31,31 @@ body_class: home
       %img{:style=>"position: absolute; top: 0; right: 0; border: 0;z-index: 900;",
         :src=>"https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png",
         :alt=>"Fork me on GitHub"}
-.container
-  %p.question What's been happening lately?
+.container.marketing
+  /%h1 Introducing ModeShape
+  .row-fluid
+    .span6
+      %img{:style=>"max-width: 100px;", :src=>"/images/storage_stack.jpg", :alt=>"It's a database"}
+      %h2 It's a database
+      %p
+        Store data, metadata, and even (huge) files all in the same place. Use transactions. Be consistent. Use queries and full-text search.
+        Choose how where (or if) your data is persisted to disk.
+    .span6
+      %h2 It's hierarchical
+      %p 
+        ModeShape stores data in a tree of nodes and properties,
+        in a structure of your design. And just like a file system, you can navigate paths to find related and nested data.
+  .row-fluid
+    .span6
+      %h2 Memory is the new disk
+      %p
+        ModeShape uses <a href="http://infinispan.org">Infinispan</a>,
+        a superfast, very scalable, highly available in-memory data grid called 
+        that distributes data across a cluster of machines and data centers.
+    .span6
+      %h2 Schema or schemaless
+      %p 
+        You decide where ModeShape should (if at all) enforce the structure and schema.
+        You can even leave room for your data to evolve in a controlled way.
+  %a.btn.btn-primary.btn-large{ :href=>"/features" } Learn more
 .container
