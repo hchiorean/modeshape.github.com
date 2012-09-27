@@ -35,27 +35,30 @@ body_class: home
   /%h1 Introducing ModeShape
   .row-fluid
     .span6
-      %img{:style=>"max-width: 100px;", :src=>"/images/storage_stack.jpg", :alt=>"It's a database"}
-      %h2 It's a database
-      %p
-        Store data, metadata, and even (huge) files all in the same place. Use transactions. Be consistent. Use queries and full-text search.
-        Choose how where (or if) your data is persisted to disk.
-    .span6
-      %h2 It's hierarchical
+      %img{:style=>"max-height: 150px;", :src=>"/images/modeshape-hierarchy.png", :alt=>"Shape your data"}
+      %h2 Shape your data
       %p 
         ModeShape stores data in a tree of nodes and properties,
         in a structure of your design. And just like a file system, you can navigate paths to find related and nested data.
-  .row-fluid
     .span6
-      %h2 Memory is the new disk
+      %img{:style=>"max-height: 150px;", :src=>"/images/modeshape-distributed.png", :alt=>"Distribute your data"}
+      %h2 Distribute
       %p
         ModeShape uses <a href="http://infinispan.org">Infinispan</a>,
         a superfast, very scalable, highly available in-memory data grid called 
         that distributes data across a cluster of machines and data centers.
+  .row-fluid
     .span6
-      %h2 Schema or schemaless
+      %img{:style=>"max-height: 150px;", :src=>"/images/modeshape-validation.png", :alt=>"Validate your data"}
+      %h2 Validate and evolve
       %p 
         You decide where ModeShape should (if at all) enforce the structure and schema.
         You can even leave room for your data to evolve in a controlled way.
-  %a.btn.btn-primary.btn-large{ :href=>"/features" } Learn more
+    .span6
+      %img{:style=>"max-height: 150px;", :src=>"/images/modeshape-scale-out.png", :alt=>"Scale naturally and easily"}
+      %h2 Scale
+      %p
+        ModeShape is elastic, so you can add more capacity by simply adding more processes
+        to the cluster. Scale across data centers to maximize availability.
+  %a.btn.btn-success.btn-large{ :href=>"/features" } Learn more
 .container
