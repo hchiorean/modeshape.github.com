@@ -57,3 +57,5 @@ Only a few key community members have privilege to perform these next steps, so 
 GitHub Pages will recognize the changes, "build" the site (this will generate an email to those watching the repository), and deploy the updated pages to "modeshape.org":modeshape.org.
 
 Everything else should happen automatically.
+
+
