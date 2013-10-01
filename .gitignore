@@ -1,3 +1,8 @@
+## Awestruct
+_tmp
+_site
+.awestruct
+.sass-cache
 _deploy/
 _site/
 _tmp/
@@ -10,3 +15,29 @@ TODO
 .awestruct
 Guardfile
 Gemfile.lock
+
+## OS related
+*.DS_Store
+
+## IDE
+.settings
+.project
+.buildpath
+*.iml
+*.ipr
+*.iws
+.idea
+
+
+# log files
+*.log
+
+## Ruby tools
+.rvmrc
+*.lock
+
+## Sources and docs
+docs
+_stg
+
+*.swp

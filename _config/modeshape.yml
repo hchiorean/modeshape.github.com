@@ -1,0 +1,43 @@
+################################################################################################
+#####
+##### This section controls what to publish, WRT. ModeShape.  There are 4 sections.  Please
+##### inspect and update *each one* before publishing the website.
+#####
+################################################################################################
+
+# -----------------------------
+# 1.  Main downloads
+#     This section covers the artifacts being made available for download, their status 
+#     (stable or unstable) and links to documentation for each version.
+# -----------------------------    
+latest:
+  version: 3.5.0.Final
+  maven_version: 3.5.0.Final
+  release_notes: http://www.jboss.org/modeshape/docs/release3-5-0-final.html
+  whats_new: TODO what's new
+  download:
+    all: http://downloads.jboss.org/modeshape/3.5.0.Final/modeshape-3.5.0.Final-dist.zip
+    eapkit: http://downloads.jboss.org/modeshape/3.5.0.Final/modeshape-3.5.0.Final-jbosseap-61-dist.zip
+    quickstarts: http://downloads.jboss.org/modeshape/3.5.0.Final/modeshape-quickstarts-3.5.0.Final.zip
+    source: http://downloads.jboss.org/modeshape/3.5.0.Final/modeshape-3.5.0.Final-source.zip
+  docs:
+    home: https://docs.jboss.org/author/display/MODE
+    user_guide: https://docs.jboss.org/author/display/MODE/ModeShape+Guide
+    getting_started_guide: https://docs.jboss.org/author/display/MODE/Getting+Started+Guide
+    faqs: https://docs.jboss.org/author/display/MODE/FAQ
+    javadocs: http://docs.jboss.org/modeshape/3.5.0.Final/api/index.html
+
+# Older releases
+    ## Leaving out the docs: element means that docs won't be displayed for this version.
+    ## Leaving out any section of the docs, e.g., the user guide, will mean that the latest version will be used.
+old:
+  3.4.0:
+    maven_version: 3.4.0.Final
+    release_notes: http://www.jboss.org/modeshape/docs/release3-4-0-final.html
+    download:
+      all: http://downloads.jboss.org/modeshape/3.4.0.Final/modeshape-3.4.0.Final-dist.zip
+      eapkit: http://downloads.jboss.org/modeshape/3.4.0.Final/modeshape-3.4.0.Final-jbosseap-61-dist.zip
+      quickstarts: http://downloads.jboss.org/modeshape/3.4.0.Final/modeshape-quickstarts-3.4.0.Final.zip
+      source: http://downloads.jboss.org/modeshape/3.4.0.Final/modeshape-3.4.0.Final-source.zip
+    docs:
+      javadocs: http://docs.jboss.org/modeshape/3.4.0.Final/api/index.html

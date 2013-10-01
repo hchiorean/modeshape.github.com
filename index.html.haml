@@ -1,64 +1,41 @@
 ---
-layout: base
-body_class: home
+layout: project
+title: Homepage
 ---
 
-%header.jumbotron.masthead#overview
-  .container
-    %h1 ModeShape
-    %p
-      A hierarchical database. Fast. Scalable. 
-      %br
-      Distributed. Dynamic schemas. Queries. 
-      %br
-      And lots more.
-      //Fast and scalable distributed store for hierarchical data with dynamic schemas, queries, transactions, references, events, and more.
-      //%br
-      // Fast and scalable distributed storage for hierarchical data with dynamic schemas, queries, transactions, events, and more.
-      // with transactions, queries, search, events and versioning.
-      // Fast and scalable distributed database for hierarchical data 
-      // with transactions, queries, search, events and versioning.
-    %a.btn.btn-primary.btn-large{ :href=>"#{site.downloads_url}#{site.version}/modeshape-#{site.version}-dist.zip" } Download ModeShape #{site.version}
-    %ul.masthead-links
-      %li
-        %a{ :href=>"/docs/getting_started#maven" } Use with Maven
-      %li
-        %a{ :href=>"/download/" } Other versions
-      %li
-        %a{ :href=>"/tools/" } Tools for Eclipse
-  .github-banner
-    %a{:href=>"https://github.com/ModeShape/modeshape"}
-      %img{:style=>"position: absolute; top: 0; right: 0; border: 0;z-index: 900;",
-        :src=>"https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png",
-        :alt=>"Fork me on GitHub"}
-.container.marketing
-  /%h1 Introducing ModeShape
-  .row-fluid
-    .span6
-      %img{:style=>"max-height: 150px;", :src=>"/images/modeshape-hierarchy.png", :alt=>"Shape your data"}
-      %h2 Shape your data
-      %p 
-        ModeShape stores data in a tree of nodes and properties,
-        in a structure of your design. And just like a file system, you can navigate paths to find related and nested data.
-    .span6
-      %img{:style=>"max-height: 150px;", :src=>"/images/modeshape-distributed.png", :alt=>"Distribute your data"}
-      %h2 Distribute
-      %p
-        ModeShape uses <a href="http://infinispan.org">Infinispan</a>,
-        a superfast, very scalable, highly available in-memory data grid called 
-        that distributes data across a cluster of machines and data centers.
-  .row-fluid
-    .span6
-      %img{:style=>"max-height: 150px;", :src=>"/images/modeshape-validation.png", :alt=>"Validate your data"}
-      %h2 Validate and evolve
-      %p 
-        You decide where ModeShape should (if at all) enforce the structure and schema.
-        You can even leave room for your data to evolve in a controlled way.
-    .span6
-      %img{:style=>"max-height: 150px;", :src=>"/images/modeshape-scale-out.png", :alt=>"Scale naturally and easily"}
-      %h2 Scale
-      %p
-        ModeShape is elastic, so you can add more capacity by simply adding more processes
-        to the cluster. Scale across data centers to maximize availability.
-  %a.btn.btn-success.btn-large{ :href=>"/features" } Learn more
-.container
+/ Main hero unit for a primary marketing message or call to action
+.row-fluid
+  -##myCarousel.carousel.slide
+  -#  %ol.carousel-indicators
+  -#    %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+  -#    %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+  -#    %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+  -#    %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
+  -#  / Carousel items
+  -#  .carousel-inner
+  -#    .active.item
+  -#      / Database dog slow?  You need Infinispan
+  -#      %a{:href => "/about"}
+  -#        %img(src="http://static.jboss.org/images/infinispan/carousel_img1.png")
+  -#    .item
+  -#      / Now fully supported, by Red Hat, as JDG.
+  -#      %a{:href => "http://www.redhat.com/promo/infspn2jdg/", :target=>"_NEW"}
+  -#        %img(src="http://static.jboss.org/images/infinispan/carousel_img2.png")
+  -#    .item
+  -#      / Book available
+  -#      %a{:href => "/documentation"}
+  -#        %img(src="http://static.jboss.org/images/infinispan/carousel_img3.png")
+  -#    .item
+  -#      / New tutorials and getting started guides available
+  -#      %a{:href => "/documentation"}
+  -#        %img(src="http://static.jboss.org/images/infinispan/carousel_img4.png")
+  -#  / Carousel nav
+  -#  %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+  -#  %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
+  %h1 TODO: Center content
+
+/ section containing blog posts
+.row-fluid.posts
+  = partial( 'latest-news.html.haml', {"real_page" => page} )
+  = partial( 'forum-posts.html.haml', {"real_page" => page} )
+  = partial( 'tweets.html.haml' )

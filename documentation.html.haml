@@ -1,0 +1,175 @@
+---
+layout: project
+title: Documentation
+---
+
+.row-fluid
+  .hero-unit
+    %h1 Get Started
+    %p Get up and running with ModeShape quickly. Let us walk you through it!
+
+.row-fluid
+  .span5.quickstarts
+    %h2 EAP/AS7 Quickstarts
+    %table.table.table-bordered
+      %tbody
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b CDI
+          %br
+          %i using repository from a JSF application via CDI
+        %td          
+          %a{:href=>"https://github.com/ModeShape/quickstart/tree/master/modeshape-cdi"} GitHub
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b CLI
+          %br
+          %i using CLI scripts for creating & setting up a repository
+        %td
+          %a{:href=>"https://github.com/ModeShape/quickstart/tree/master/modeshape-cli"} GitHub
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b Clustering
+          %br 
+          %i how to configure ModeShape to run in a cluster
+        %td
+          %a{:href=>"https://github.com/ModeShape/quickstart/tree/master/modeshape-clustering"} GitHub
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b EJBs
+          %br
+          %i using a repository from various EJBs
+        %td
+          %a{:href=>"https://github.com/ModeShape/quickstart/tree/master/modeshape-ejb"} GitHub
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b Federation
+          %br
+          %i connecting a repository to an external file system
+        %td
+          %a{:href=>"https://github.com/ModeShape/quickstart/tree/master/modeshape-federation"} GitHub
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b Servlet
+          %br
+          %i setting up and using a repository from a servlet
+        %td
+          %a{:href=>"https://github.com/ModeShape/quickstart/tree/master/modeshape-servlet"} GitHub
+  .span5.quickstarts
+    %h2 Examples
+    %table.table.table-bordered
+      %tbody
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b Standalone
+          %br
+          %i how to embed a repository in a standalone application
+        %td
+          %a{:href=>"https://github.com/ModeShape/modeshape-examples/tree/master/modeshape-embedded-example"} GitHub
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b Tomcat JSF
+          %br
+          %i how to use ModeShape from a Tomcat/JSF application
+        %td
+          %a{:href=>"https://github.com/ModeShape/modeshape-examples/tree/master/modeshape-tomcat-jsf-example"} GitHub
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b Sequencing
+          %br
+          %i how to configure sequencing
+        %td
+          %a{:href=>"https://github.com/ModeShape/modeshape-examples/tree/master/modeshape-sequencing-example"} GitHub
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b Spring integration
+          %br
+          %i how to integrate ModeShape with the Spring framework
+        %td
+          %a{:href=>"https://github.com/ModeShape/modeshape-examples/tree/master/modeshape-spring-example"} GitHub
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b Custom logging
+          %br
+          %i writing & configuring your own custom logger
+        %td
+          %a{:href=>"https://github.com/ModeShape/modeshape-examples/tree/master/modeshape-custom-logging-example"} GitHub
+      %tr
+        %td
+          %i.icon-certificate.pull-left
+          %b External filesystem
+          %br
+          %i connecting to an external file system
+        %td
+          %a{:href=>"https://github.com/ModeShape/modeshape-examples/tree/master/modeshape-filesystem-store-example"} GitHub
+.row-fluid
+  %a{:name => "documentation"}
+  %h2 Documentation
+  %p Official ModeShape documentation is available online:
+
+  %table.table.table-bordered.table-striped
+    %thead
+      %tr
+        %th Version
+        %th 
+        %th 
+        %th 
+        %th 
+        %th 
+    %tbody
+    %tr
+      %td 
+        #{site.modeshape.latest.version}
+        .label.label-success.pull-right
+          %i.icon-check-sign
+          Latest
+      %td
+        %a{:href=>site.modeshape.latest.docs.home} Documentation Home
+      %td
+        %a{:href=>site.modeshape.latest.docs.user_guide} User Guide
+      %td
+        %a{:href=>site.modeshape.latest.docs.getting_started_guide} Getting Started Guide
+      %td
+        %a{:href=>site.modeshape.latest.docs.faqs} FAQs
+      %td
+        %a{:href=>site.modeshape.latest.docs.javadocs} Javadocs
+    - site.modeshape.old.each do |ver, cfg|
+      - doc = cfg.docs
+      %tr
+        %td
+          #{ver}
+        %td
+        %td
+        %td
+        %td
+        %td
+          %a{:href=>doc.javadocs} Javadocs
+
+%h2 Community Help
+%p ModeShape is backed by an active community of developers, end users, content producers and generally cool people. :)
+%dl.dl-horizontal
+  %dt
+    %i.icon-bookmark
+    User Forums
+    %dd can help answer questions you have and be a point of discussion and reference for using ModeShape
+  %dt
+    %i.icon-comments-alt
+    IRC
+    %dd
+      is our real-time chat location. Join us on the 
+      %code #modeshape
+      IRC channel on 
+      %a{:href=>"http://freenode.net/", :target=>"_new"}Freenode.
+      Join in to talk to us in real time!
+      %a.btn{:href => "/community", :role => "button"} Talk to us

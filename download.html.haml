@@ -1,0 +1,71 @@
+---
+layout: rightcol
+rightcol_partial: rightcol-download.html.haml
+title: Download
+---
+.row-fluid
+  .row-fluid
+    .span10
+      .label.label-success
+        %i.icon-check-sign
+        Latest
+      %h4 #{site.modeshape.latest.version}
+      %p #{site.modeshape.latest.whats_new}
+      .row-fluid
+        .span3
+          %p Zip Downloads:
+        .span4
+          %a.btn.btn-success.btn-block{:href => site.modeshape.latest.download.all}
+            %i.icon-download-alt
+            All
+          All ModeShape components
+        .span4
+          %a.btn.btn-success.btn-block{:href => site.modeshape.latest.download.eapkit}
+            %i.icon-download-alt
+            EAP Kit
+          Deploy ModeShape in EAP/AS7
+          %br
+      .row-fluid
+        .span3
+        .span4
+          %a.btn.btn-success.btn-block{:href => site.modeshape.latest.download.quickstarts}
+            %i.icon-download-alt
+            Quickstarts
+          EAP/AS7 quickstarts
+          %br
+        .span4
+          %a.btn.btn-success.btn-block{:href => site.modeshape.latest.download.source}
+            %i.icon-download-alt
+            Sources
+          All the ModeShape component sources
+          %br
+      %br
+      .row-fluid
+        .span12{:style => "text-align: right;"}
+          %a{:href => site.modeshape.latest.release_notes, :target => "_NEW"}
+            %i.icon-pencil
+            Release notes
+          &nbsp;&nbsp;
+          = partial( 'maven-coords-link.html.haml', {"artifactId" => "modeshape-bom-embedded", "version_latest" => site.modeshape.latest.maven_version, "modal_id" => "main"} )
+
+#accordion2.accordion
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", :href => "#collapseOne"}
+        Download older versions of ModeShape
+        %i.icon-angle-down
+    #collapseOne.accordion-body.collapse.in
+      .accordion-inner
+        %table.table.table-bordered.table-striped
+          %thead
+            %tr
+              %th Version
+              %th All
+              %th EAP Kit
+              %th Quickstarts
+              %th Sources
+              %th Maven
+          %tbody
+            - site.modeshape.old.each do |ver, info|
+              = partial( 'download-tbl-row.html.haml', {"release_version" => ver, "release_info" => info} )
+          %br

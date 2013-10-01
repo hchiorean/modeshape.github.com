@@ -1,0 +1,60 @@
+---
+layout: project
+title: Community
+---
+
+.row-fluid
+  .hero-unit
+    %h1 Communications
+    %p How to communicate with the ModeShape team
+
+  .row-fluid
+    %ul
+      %li.span6
+        %h2 User Forums
+        %p
+          ModeShape's user forums should be your first port of call for any user-related issues with ModeShape.  Be it a question, wanting to report a bug, looking for advice, or simply sharing some cool stories you may have.
+        %p
+          %a.btn.btn-primary{:href => "https://community.jboss.org/en/modeshape/content?filterID=contentstatus[published]~objecttype~objecttype[thread]", :role => "button"} Visit the User Forums
+        .well
+          %p
+            %i.icon-thumbs-up.icon-2x.pull-left
+            %h4 Etiquette
+            If you are asking for help, have you read through the
+            %a{:href => "/documentation"} documentation
+            first?  You may find your answer there.
+          %p
+            Also, if you are reporting a bug, have you checked our
+            %a{:href => "http://issues.jboss.org/browse/MODE"} bug tracker
+            first?  It may be a known issue.
+
+      %li.span6
+        %h2 IRC
+        %p
+          The ModeShape community uses
+          %a{:href => "http://en.wikipedia.org/wiki/Internet_Relay_Chat", :target => "_NEW"} IRC
+          for real-time communications. Join us on the 
+          %code #modeshape
+          IRC channel on 
+          %a{:href=>"http://freenode.net/", :target=>"_new"}Freenode.
+        %p
+          %a.btn.btn-primary{"data-toggle" => "modal", :href => "#myModal", :role => "button"} IRC Instructions
+          #myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+            .modal-header
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+            %h4#myModalLabel IRC Instructions
+            .modal-body
+              %p
+                Learn more about Freenode 
+                %a{:href=>"http://freenode.net/", :target=>"_new"}here
+                and if you need a list of IRC clients, visit 
+                %a{:href=>"http://en.wikipedia.org/wiki/Comparison_of_Internet_Relay_Chat_clients", :target=>"_new"}Wikipedia.
+                There are many high-quality, free and open source clients for almost any platform - including mobile devices!
+              %p
+                Once you have connected to a Freenode server, join 
+                %code #modeshape
+                and you will be able to speak with a number of ModeShape developers, users and contributors.
+              .modal-footer
+              %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Close
+        %p
+          %img(src="/images/chat.png")

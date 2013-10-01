@@ -1,0 +1,25 @@
+- artifactId = page["artifactId"]
+- latest = page["version_latest"]
+%div.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1", :id => "mvn" + page["modal_id"], :style => "text-align: left;"}
+  .modal-header
+  %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+  %h4#myModalLabel Maven Coordinates
+  .modal-body{:style => "max-height: 500px;"}
+    %p
+      Add the following to the dependencies declared in your 
+      %code pom.xml
+      file for the
+      %b latest
+      version of
+      %code #{artifactId}
+    %pre
+      :preserve        
+        ...
+        &lt;dependency&gt;
+          &lt;groupId&gt;org.modeshape&lt;/groupId&gt;
+          &lt;artifactId&gt;#{artifactId}&lt;/artifactId&gt;
+          &lt;version&gt;#{latest}&lt;/version&gt;
+        &lt;/dependency&gt;
+        ...
+    .modal-footer
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Close

@@ -1,33 +1,111 @@
-title: ModeShape
-version: 3.0.0.Beta4
-tagline: The fast and scalable hierarchical database
-description: Fast and scalable distributed database for hierarhical data. Open source. Fast. Scalable. Highly-available.
-ohloh_id: 474392
-issue_tracker: https://issues.jboss.org/browse/MODE
-github_organization_name: ModeShape
-github_organization_url: https://github.com/ModeShape
-source_repo: https://github.com/ModeShape/modeshape
-website_source_repo: https://github.com/ModeShape/modeshape.github.com
-terms_of_use: http://www.redhat.com/legal/legal_statement.html
-privacy_policy: http://www.redhat.com/legal/privacy_statement.html
-api_docs: http://docs.jboss.org/modeshape/api/latest
-downloads_url: http://downloads.jboss.org/modeshape/
+# Default page title
+title: Modeshape
+
+# Project id name
+project: modeshape
+
+# Default minify settings
+css_minifier: disabled
+js_minifier: disabled
+html_minifier: disabled
+
+asciidoctor:
+  :attributes:
+    icons: 'font'
+    sectanchors: true
+    toclevels: 3
+    numbered: true
+    docinfo: true
+    source-highlighter: coderay
+    backend: html5
+    doctype: book    
+    ## Leave this empty!!
+    imagesdir: 
+    experimental: true
+# Merge multiple JavaScript files to improve performance
+fileMerger:
+  enabled: true
+  outputFilePath: /javascripts/bootstrap-community.js
+  paths:
+    - /javascripts/_bootstrap-transition.js
+    - /javascripts/_bootstrap-alert.js
+    - /javascripts/_bootstrap-button.js
+    - /javascripts/_bootstrap-carousel.js
+    - /javascripts/_bootstrap-collapse.js
+    - /javascripts/_bootstrap-dropdown.js
+    - /javascripts/_bootstrap-modal.js
+    - /javascripts/_bootstrap-tooltip.js
+    - /javascripts/_bootstrap-popover.js
+    - /javascripts/_bootstrap-scrollspy.js
+    - /javascripts/_bootstrap-tab.js
+    - /javascripts/_bootstrap-typeahead.js
+    - /javascripts/_bootstrap-affix.js
+    - /javascripts/_jbossorg-navbarfix.js
+    - /javascripts/_jbossorg-misc.js
+    - /javascripts/_jquery-easytabs.js
+    - /javascripts/_crisp-scripts.js
+
+# Cache hosted fonts, images and javascript
+wget:
+  enabled: true
+  rerunEach: 86400 # seconds
+  timestampFilename: _wget-timestamp
+  options:
+    - --no-remove-listing
+    - -q
+    - -r
+    - --no-parent
+    - -N
+    - --reject 'index.html*'
+    - -e robots=off
+    - --directory-prefix=cache
+  urls:
+    - http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js
+    - http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.min.js
+    - http://static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js
+    - http://static.jboss.org/theme/js/libs/prettify/188.0.0/prettify.min.js
+    - http://static.jboss.org/theme/js/libs/holder/1.9/holder.js
+    - http://static.jboss.org/theme/fonts/titilliumtext/
+    - http://static.jboss.org/theme/fonts/font-awesome/
+    - http://static.jboss.org/theme/images/common/
+    - http://static.jboss.org/images/example/
+
+# Update resource URLs based on the profile
 profiles:
-  debug:
-    show_debug: true
   development:
+    jborg_fonts_url: http://static.jboss.org/theme/fonts
+    jborg_images_url: http://static.jboss.org/theme/images
+    jborg_js_url: http://static.jboss.org/theme/js
+    project_images_url: http://static.jboss.org/images/example
+    bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/2.3.1.1/bootstrap-community
+    bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.1/bootstrap-community      
+    # jborg_fonts_url: /cache/static.jboss.org/theme/fonts
+    # jborg_images_url: /cache/static.jboss.org/theme/images
+    # jborg_js_url: /cache/static.jboss.org/theme/js
+    # project_images_url: /cache/static.jboss.org/images/example
+    # bootstrap_css_url: /stylesheets/bootstrap-community
+    # bootstrap_js_url: /javascripts/bootstrap-community
   staging:
-    base_url: http://staging.modeshape.org/
-    add_google_tracker: false
-    deploy:
-      host: modeshape.org
-      path: /var/www/domains/modeshape.org/staging/htdocs
+    jborg_fonts_url: http://static.jboss.org/theme/fonts
+    jborg_images_url: http://static.jboss.org/theme/images
+    jborg_js_url: http://static.jboss.org/theme/js
+    project_images_url: http://static.jboss.org/images/example
+    bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/2.3.1.1/bootstrap-community
+    bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.1/bootstrap-community
+    base_url:  https://github.com/ModeShape/modeshape.github.com
   production:
-    base_url: http://modeshape.org/
-    add_google_tracker: false
-    disqus: modeshape
+    minified: .min
+    css_minifier: enabled
+    js_minifier: enabled
+    html_minifier: enabled
+    jborg_fonts_url: http://static.jboss.org/theme/fonts
+    jborg_images_url: http://static.jboss.org/theme/images
+    jborg_js_url: http://static.jboss.org/theme/js
+    project_images_url: http://static.jboss.org/images/example
+    bootstrap_css_url: http://static.jboss.org/theme/css/bootstrap-community/2.3.1.1/bootstrap-community
+    bootstrap_js_url: http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.1/bootstrap-community
+    base_url: https://github.com/ModeShape/modeshape.github.com
+    google_analytics: UA-8601422-1
     deploy:
-      host: modeshape.org
-      path: /var/www/domains/modeshape.org/www/htdocs
-disqus: modeshape
-google_analytics: blah-blah
+      host: github_pages
+      branch: master

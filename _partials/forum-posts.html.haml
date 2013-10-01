@@ -1,0 +1,46 @@
+-# Latest news - reads an RSS feed of forum posts from https://community.jboss.org/community/feeds/threads?community=2126
+- real_page = page["real_page"]
+.span4.well
+  %h2 Latest forum discussions
+  #forumfeed
+    .text-center
+    %i.icon-refresh.icon-spin.icon-4x
+      %a{:href => "https://community.jboss.org/community/feeds/threads?community=2126"} More forum posts
+
+  %script{ :type => 'text/javascript', :src => 'https://www.google.com/jsapi'}
+  -# Uses Google Feed API to load forum post feed and replace the DOM elements
+  :javascript
+    google.load("feeds", "1");
+  
+    function initialize() {
+      var feed = new google.feeds.Feed("https://community.jboss.org/community/feeds/threads?community=2126");
+      feed.setNumEntries(4);
+      feed.load(function(result) {
+        if (!result.error) {
+          var feedDiv = $('#forumfeed');
+          feedDiv.empty();
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            var entryDate = new Date(entry.publishedDate);
+            var date_string =
+              entryDate.getFullYear() + '-'
+              + ('0' + entryDate.getDate()).slice(-2) + '-'
+              + ('0' + (entryDate.getMonth()+1)).slice(-2);
+            feedDiv.append(
+              $('<div class="news"/>').append(
+                $('<h5/>').html(entry.title)
+              ).append(
+                $('<small/>').text(date_string)
+              ).append(
+                $('<p/>').html(entry.contentSnippet.replace(/&lt;!--.*--&gt;/g, '').replace('&nbsp;', ' ')).append(
+                  ' <a href="' + entry.link + '">more</a>'
+                )
+              ).append(
+                '<hr/>'
+              )
+            );
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
